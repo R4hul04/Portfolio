@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Parande</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./static/images/computer.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="../static/images/Rahul1.jpg" alt="Rahul Parande" style = "width : 250px", height = "300px">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Rahul Parande">Rahul Parande</h1>
+
+          <p class="title" style="font-size: medium">Software Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">rahulparande2000@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="document-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Resume</p>
+
+              <button onclick="openResume()" style="color: rgb(243, 243, 239); font-size: 13px">View Resume</button>
+
+              <script>
+              function openResume() {
+                  window.open('./static/images/Resume_RahulParande.pdf', '_blank');
+              }
+              </script>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Leetcode</p>
+              <a href="https://leetcode.com/u/rparande/" class="contact-link" target="_blank">View Profile</a>
+          </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Github</p>
+              <a href="https://github.com/R4hul04" class="contact-link" target="_blank">View Profile</a>
+          </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/people/Rahul-Parande/pfbid0FuZmbERZvzDDXQBYBx8Z3q8SZ1cXK2bzGddxLs5AFjMxMvVyRd3zRNZHeZFQxiDQl/" class="social-link" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/rahul-parande/" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <!-- <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li> -->
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Extras</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a passionate software developer and data scientist with a strong foundation in machine learning, web development, and data analysis. 
+          </p>
+
+          <p>
+            I'm on the lookout for job opportunities in software engineering where I can contribute my expertise. I'm eager to help companies grow and innovate through technology.
+
+          </p>
+          <p>I have hands-on experience with a variety of programming languages and frameworks, including Python, Java, C/C++, Flask, and ReactJS. My expertise spans across database management, cloud computing, and DevOps practices.</p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+            <img src="./static/images/skills.png" style=" width: 35px; height: 35px; margin-left: 280px; margin-top: -20px; margin-bottom: -42px;"> 
+            <h3 class="h3 service-title" style="margin-top: 10px;">Languages and Tools</h3>
+          
+            <style>
+              .skill-grid {
+                  display: grid;
+                  grid-template-columns: repeat(9, 1fr);
+                  gap: 20px 20px;
+                  justify-items: center;
+
+              }
+              
+              .skill-icon {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+              }
+              .skill-icon img {
+                  width: 100%;
+                  filter: grayscale(0.95);
+                  transition: var(--transition-3);
+                }
+
+              .skill-icon img:hover { filter: grayscale(0); }
+          
+              /* .skill-icon:hover {
+                  background-color: rgb(220, 220, 226);    */
+
+              .icons-grid {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+                  gap: 10px;
+                  justify-items: center;
+                  align-items: center;
+        }
+              
+          </style>
+            <!-- <div class="skill-grid">
+              <div class="skill-icon"> <img src="./static/images/python.png"></div>
+              <div class="skill-icon"> <img src="./static/images/java.png"> </div>
+              <div class="skill-icon"> <img src="./static/images/c.png"></div>
+              <div class="skill-icon"> <img src="./static/images/c++.png"></div>
+              <div class="skill-icon"> <img src="./static/images/javascript.png"></div>
+              <div class="skill-icon"> <img src="./static/images/html.png"></div>
+              <div class="skill-icon"> <img src="./static/images/css.png"></div>
+              <div class="skill-icon"> <img src="./static/images/node.png"></div>
+              <div class="skill-icon"> <img src="./static/images/react.png"></div>
+              <div class="skill-icon"> <img src="./static/images/mongo.png"></div>
+              <div class="skill-icon"> <img src="./static/images/haskell.png"></div>
+              <div class="skill-icon"> <img src="./static/images/python.png"></div>
+              <div class="skill-icon"> <img src="./static/images/python.png"></div>
+          </div> -->
+          
+<div class="skill-grid"> 
+  <a href="https://www.python.org" target="_blank" rel="noreferrer">
+    <div class="skill-icon">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="60" height="60"/>
+    </div>
+  </a>
+  
+  
+<a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://dart.dev" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="dart" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.docker.com/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://firebase.google.com/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://flutter.dev" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.haskell.org/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Haskell-Logo.svg" alt="haskell" width="60" height="60"/>
+  </div>
+</a>
+
+<a href="https://www.java.com" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://kubernetes.io" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.linux.org/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://nodejs.org" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://opencv.org/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.php.net" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.postgresql.org" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="60" height="60"/>
+  </div>
+</a>
+
+<a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="60" height="60"/>
+  </div>
+</a>
+<!-- <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="60" height="60"/>
+  </div>
+</a> -->
+
+
+<a href="https://pytorch.org/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="60" height="60"/>
+  </div>
+</a>
+
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://scikit-learn.org/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.sqlite.org/" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="60" height="60"/>
+  </div>
+</a>
+<a href="https://www.tensorflow.org" target="_blank" rel="noreferrer">
+  <div class="skill-icon">
+      <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="60" height="60"/>
+  </div>
+</a>
+</div>
+</section>
+<p style="margin-top: -35px;">‎ </p>
+
+<h3 class="h3 service-title" style="margin-top: 10px;">Certifications</h3>
+<p style="margin-top: -40px;">‎ </p>
+          
+
+      
+
+
+        <!--
+          - testimonials
+        -->
+
+        <!-- <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+            <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./static/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./static/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+          
+
+        </section> -->
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container >
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal" >
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./static/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <!-- <img src="./static/images/icon-quote.svg" alt="quote icon"> -->
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Google Advanced Data Analytics</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+        <!-- <ul class="testimonials-list has-scrollbar"> -->
+
+          <li class="testimonials-item">
+            <div class="content-card" data-testimonials-item>
+
+              <figure class="testimonials-avatar-box">
+                <img src="./static/images/google.png" width="60" data-testimonials-avatar style="border-radius: 14px;">
+              </figure> 
+
+              <h4 class="h4 testimonials-item-title" data-testimonials-title>Google Advanced Data Analytics</h4>
+
+              <div class="testimonials-text" data-testimonials-text>
+                <a href="./static/images/Google Adv Data Analytics.pdf" class="contact-link" target="_blank" style="color: rgb(248, 215, 171); ">View Certificate</a>
+
+                <p style="margin-top: 2px;">
+                  Through hands-on labs and projects, this certification provided me with practical skills in data science and machine learning. I gained proficiency in Python programming, working with SQL databases, developing data visualizations, and creating machine learning models.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="testimonials-item">
+            <div class="content-card" data-testimonials-item>
+
+              <figure class="testimonials-avatar-box">
+                <img src="./static/images/bcg.png" width="60" data-testimonials-avatar style="border-radius: 14px;">
+              </figure> 
+
+              <h4 class="h4 testimonials-item-title" data-testimonials-title>Data Science and Analytics by BCG - Virtual Program</h4>
+
+              <div class="testimonials-text" data-testimonials-text>
+                <a href="./static/images/BCG.pdf" class="contact-link" target="_blank" style="color: rgb(248, 215, 171); ">View Certificate</a>
+                <p style="margin-top: 2px;">
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="testimonials-item">
+            <div class="content-card" data-testimonials-item >
+
+              <figure class="testimonials-avatar-box">
+                <img src="./static/images/c1.png" width="60" data-testimonials-avatar style="border-radius: 14px;">
+              </figure>
+
+              <h4 class="h4 testimonials-item-title" data-testimonials-title>Data Science - IBM </h4>
+
+              <div class="testimonials-text" data-testimonials-text>
+                <a href="./static/images/IBM.pdf" class="contact-link" target="_blank" style="color: rgb(248, 215, 171); ">View Certificate</a>
+                <p style="margin-top: 2px;">
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="testimonials-item">
+            <div class="content-card" data-testimonials-item>
+
+              <figure class="testimonials-avatar-box">
+                <img src="./static/images/microsoft.png" width="60" style="border-radius: 14px;" data-testimonials-avatar >
+              </figure>
+
+              <h4 class="h4 testimonials-item-title" data-testimonials-title>Microsoft Azure for Data Engineering</h4>
+
+              <div class="testimonials-text" data-testimonials-text>
+                <a href="./static/images/Coursera Azure_Data_Engineering.pdf" class="contact-link" target="_blank" style="color: rgb(248, 215, 171); ">View Certificate</a>
+                <p style="margin-top: 2px;">
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+          <!-- </ul> -->
+        
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+              <div class="icon-box">
+                  <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+              <li class="timeline-item">
+                  <h4 class="h4 timeline-item-title" style="font-size: 18px;">Software Developer</h4>
+                  <p style="font-size: 15px; color: antiquewhite;"><i>Nexis Technology Lab, Syracuse, New York</i></p>
+                  <span>Aug 2023 - May 2024</span>
+                  <div class="info-box">
+                      <button class="info-button" style="color: antiquewhite;"><u>Responibilities</u></button>
+                      <div class="info-content1" style="display: none; color: rgb(207, 207, 207); margin-top: 5px;">
+                          <ul>
+                              <li>
+                                  1. Implemented data gathering pipelines using Python for backend scripting, PostgreSQL for data storage and Docker for containerization.
+                              </li>
+                              <li>
+                                  2. Employed agile methodologies to iteratively gather and preprocess travel data, leveraging Jupyter Notebook for exploratory data analysis and Git for version control.
+                              </li>
+                              <li>
+                                  3. Automated data extraction from diverse sources, including travel websites and forums, using Python library BeautifulSoup.
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </li>
+              <li class="timeline-item">
+                  <h4 class="h4 timeline-item-title" style="font-size: 18px;">Machine Learning Engineer Intern</h4>
+                  <p style="font-size: 15px; color: antiquewhite;"><i>Research Cell, Mumbai University, Mumbai, India</i></p>
+                  <span>Jan 2022 - May 2022</span>
+                  <div class="info-box">
+                    <button class="info-button" style="color: antiquewhite;"><u>Responibilities</u></button>
+                      <div class="info-content1" style="display: none; color: rgb(207, 207, 207); margin-top: 5px;">
+                          <ul>
+                              <li>
+                                  1. Worked on developing and implementing machine learning models for various projects.
+                              </li>
+                              <li>
+                                  2. Conducted research and analysis on various datasets to improve model accuracy.
+                              </li>
+                              <li>
+                                  3. Collaborated with cross-functional teams to integrate models into the software development lifecycle.
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </li>
+              <li class="timeline-item">
+                  <h4 class="h4 timeline-item-title" style="font-size: 18px;">Software Developer</h4>
+                  <p style="font-size: 15px; color: antiquewhite;"><i>Art of Living, Mumbai, India</i></p>
+                  <span>Aug 2021 - Jan 2022</span>
+                  <div class="info-box">
+                    <button class="info-button" style="color: antiquewhite;"><u>Responibilities</u></button>
+                      <div class="info-content1" style="display: none; color: rgb(207, 207, 207); margin-top: 5px;">
+                          <ul>
+                              <li>
+                                  1. Contributed to the development of web applications using various programming languages and frameworks.
+                              </li>
+                              <li>
+                                  2. Collaborated with cross-functional teams to design and implement user-friendly interfaces.
+                              </li>
+                              <li>
+                                  3. Debugged and optimized code to improve performance and efficiency.
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </li>
+          </ol>
+      </section>
+      
+      <script>
+        const infoButtons = document.querySelectorAll('.info-button');
+        const infoContents = document.querySelectorAll('.info-content1');
+    
+        infoButtons.forEach((button, index) => {
+            button.addEventListener('click', function() {
+                const content = infoContents[index];
+                if (content.style.display === 'none') {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title" style="font-size: 18px;">Syracuse University</h4>
+
+              <span>GPA - 3.8</span>
+              <span>2022 - 2024</span>
+
+              <p class="timeline-text" style="margin-top: 2px;">
+                Coursework : Design and Analysis of Algorithms,
+                Principles of Operating Systems,
+                Structured Programming and Formal Methods,
+                Computer Architecture,
+                Cryptography,
+                Social Media and Data Mining,
+                Machine Learning,
+                Object Oriented Design,
+                Database Management System,
+                Applied Natural Language Processing
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title" style="font-size: 18px;">University of Mumbai</h4>
+
+              <span>GPA - 9.0</span>
+              <span >2018 - 2022</span>
+
+              <p class="timeline-text" style="margin-top: 2px;">
+                Coursework : Data Structures and Algorithms,
+                Database Management Systems,
+                Operating Systems,
+                Computer Architecture,
+                Cloud Computing,
+                Machine Learning,
+                Artificial Intelligence,
+                Software Development Life Cycle,
+                Computer Networks
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title" style="font-size: 18px;">Ratanbai Walbai Jr. Science College</h4>
+
+              <span >2016 - 2018</span>
+              <span >Grade - 82%</span>
+
+            </li>
+
+          </li>
+
+          <li class="timeline-item">
+
+            <h4 class="h4 timeline-item-title" style="font-size: 18px;">JVM'S New English School & Jr. College </h4>
+
+            <span>2016 - 2018</span>
+            <span>Grade - 95%</span>
+
+          </li>
+
+          </ol>
+
+        </section>
+
+        
+
+        <!-- <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section> -->
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+
+
+            <!-- <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li> -->
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+
+
+              <!-- <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li> -->
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/R4hul04/UsedBooks_Management" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/books.jpg" alt="Used Books Management" loading="lazy" style="width: 150%;">
+                </figure>
+
+                <h3 class="project-title">Used Books Management</h3>
+
+                <p class="project-category">Java, Spring Boot, MongoDB</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/R4hul04/ds_salary_proj" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/Salary.jpeg" alt="Salary Estimation" loading="lazy" style="width: 100%; height: 195px;">
+                </figure>
+
+                <h3 class="project-title">Salary Estimation</h3>
+
+                <p class="project-category">Data visualization, EDA, Python</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/R4hul04/Emotional-Analysis-on-COVID19-tweets" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/covid.png" alt="covid-19" loading="lazy" style="width: 100%; height: 195px;">
+                </figure>
+
+                <h3 class="project-title">COVID Tweet Emotion Analysis</h3>
+
+                <p class="project-category">Python, EDA, Machine Learning</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://github.com/R4hul04/Online_Democratic_Decision_Making_Platform_ODDMP" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/voting.jpeg" alt="voting" loading="lazy" style="width: 100%; height: 195px;">
+                </figure>
+
+                <h3 class="project-title">Voting Poll System</h3>
+
+                <p class="project-category">PHP, MySQL</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://github.com/R4hul04/Virtual_HealthCare_Aggregator" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/health.jpeg" alt="health" loading="lazy" style="width: 100%; height: 195px;">
+                </figure>
+
+                <h3 class="project-title">Online Healtcare System</h3>
+
+                <p class="project-category">Web development, MySQL, Flask, Python</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/R4hul04/Symptom_Based_Medical_Expert_System_SBMES" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/health1.webp" alt="health1" loading="lazy" style="width: 100%; height: 195px;">
+                </figure>
+
+                <h3 class="project-title">Disease Prediction System</h3>
+
+                <p class="project-category">EDA, scikit-learn, RandomForest, Analysis</p>
+
+              </a>
+            </li>
+
+            <!-- <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./static/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li> -->
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="extras" data-page="extras">
+
+        <header>
+          <h2 class="h2 article-title">Extras</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+
+            <li class="blog-post-item">
+              <a href="./static/images/Google_Data_Analytics.pdf" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./static/images/googledata.png" alt="google1" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Coursera</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">June 15, 2023</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Google Data Analytics</h3>
+
+                  <!-- <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p> -->
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="./static/images/Coursera AzureDevOps.pdf" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./static/images/AzureDevOps.png" alt="Azure DevOps" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Coursera</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">May 14, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Azure DevOps</h3>
+
+                  <!-- <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p> -->
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="./static/images/LOR.pdf" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./static/images/LOR.png" alt="lor" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Recognition</p>
+
+                    <!-- <span class="dot"></span> -->
+
+                    <!-- <time datetime="2022-02-23">Fab 23, 2022</time> -->
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Letter of Recognition</h3>
+
+                  <!-- <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p> -->
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="./static/images/Crypto.pdf" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./static/images/crypto.png" alt="crypto" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">June 13, 2023</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Cryptography</h3>
+
+                  <!-- <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p> -->
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="./static/images/SIH2020.pdf" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./static/images/SIH2020.png" alt="SIH2020 " loading ="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Hackathon</p>
+
+                    <span class="dot"></span>
+
+                    <time>Dec, 2020</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Smart India Hackathon</h3>
+
+                  <!-- <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p> -->
+
+                </div>
+
+              </a>
+            </li>
+
+            
+
+            <li class="blog-post-item">
+              <a href="./static/images/iitc.pdf" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./static/images/iitc.png" alt="iitc" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+
+                    <span class="dot"></span>
+
+                    <time>IIT Bombay</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">C Certification</h3>
+
+                  <!-- <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p> -->
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="./static/images/iitp.pdf" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./static/images/iitp.png" alt="iitp" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+
+                    <span class="dot"></span>
+
+                    <time>IIT Bombay</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Python Certification</h3>
+
+                  <!-- <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p> -->
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="./static/images/php_mysql.pdf" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./static/images/php_mysql.png" alt="php_mysql" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Certificate</p>
+
+                    <span class="dot"></span>
+
+                    <time>IIT Bombay</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">PHP and MySQL Certification</h3>
+
+                  <!-- <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p> -->
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <!-- <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section> -->
+
+        <section class="contact-form">
+          <form action="/submit" method="post" class="form" data-form>
+              <div class="input-wrapper">
+                  <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                  <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              </div>
+              <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+              <button class="form-btn" type="submit">
+                  <ion-icon name="paper-plane"></ion-icon>
+                  <span>Send Message</span>
+              </button>
+          </form>
+      </section>
+
+    
+      <script>
+          document.querySelector('.form').addEventListener('submit', async function (e) {
+              e.preventDefault();
+              const formData = new FormData(this);
+              try {
+                  const response = await fetch('/submit', {
+                      method: 'POST',
+                      body: formData
+                  });
+                  const result = await response.json();
+                  if (response.ok) {
+                      alert('Message sent successfully!');
+                      form.reset();
+                  } else {
+                      alert('Error: ' + result.error);
+                  }
+              } catch (error) {
+                  console.error('Error submitting form:', error);
+                  alert('An error occurred while submitting the form.');
+              }
+          });
+      </script>
+      
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./static/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
