@@ -1,29 +1,19 @@
 from flask import Flask, render_template, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
+from dotenv import load_dotenv
 import os
+import requests
+
+load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
 
-# Database Configuration
-basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'database.db')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# Supabase Configuration
+SUPABASE_URL = os.getenv('SUPABASE_URL')
+SUPABASE_KEY = os.getenv('SUPABASE_KEY')
+SUPABASE_TABLE = 'contact_form'
 
-db = SQLAlchemy(app)
-
-# Create the database model
-class ContactForm(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    fullname = db.Column(db.String(100), nullable=False)
-    email = db.Column(db.String(100), nullable=False)
-    message = db.Column(db.Text, nullable=False)
-
-    def __repr__(self):
-        return f'<ContactForm {self.fullname}>'
-
-# Create the database
-with app.app_context():
-    db.create_all()
+# Define the Supabase API URL for interacting with the database
+SUPABASE_API_URL = f'{SUPABASE_URL}/rest/v1/{SUPABASE_TABLE}'
 
 @app.route('/')
 def home():
@@ -38,12 +28,30 @@ def submit():
     if not name or not email or not message:
         return jsonify({'error': 'All form fields are required.'}), 400
 
-    # Save to the database
-    new_entry = ContactForm(fullname=name, email=email, message=message)
-    db.session.add(new_entry)
-    db.session.commit()
+    try:
+        # Save to Supabase
+        response = requests.post(
+            SUPABASE_API_URL,
+            headers={
+                'Authorization': f'Bearer {SUPABASE_KEY}',
+                'Content-Type': 'application/json',
+                'apikey': SUPABASE_KEY
+            },
+            json={
+                'fullname': name,
+                'email': email,
+                'message': message
+            }
+        )
 
-    return jsonify({'success': 'Form submitted successfully!'})
+        if response.status_code == 201:
+            return jsonify({'success': 'Form submitted successfully!'})
+        else:
+            return jsonify({'error': 'Failed to send message. Please try again later.'}), 500
+
+    except Exception as e:
+        print(f"Error sending message: {e}")
+        return jsonify({'error': 'Failed to send message. Please try again later.'}), 500
 
 if __name__ == '__main__':
     app.run()
