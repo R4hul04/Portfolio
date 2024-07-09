@@ -1,26 +1,29 @@
 from flask import Flask, render_template, request, jsonify
-from dotenv import load_dotenv
+from flask_sqlalchemy import SQLAlchemy
 import os
-import boto3
-from botocore.exceptions import NoCredentialsError, PartialCredentialsError
-
-load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
 
-# AWS SES Configuration
-AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-AWS_REGION = os.getenv('AWS_REGION')
-SES_SENDER = os.getenv('SES_SENDER')
-SES_RECIPIENT = os.getenv('SES_RECIPIENT')
+# Database Configuration
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'database.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-ses_client = boto3.client(
-    'ses',
-    region_name=AWS_REGION,
-    aws_access_key_id=AWS_ACCESS_KEY_ID,
-    aws_secret_access_key=AWS_SECRET_ACCESS_KEY
-)
+db = SQLAlchemy(app)
+
+# Create the database model
+class ContactForm(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    fullname = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(100), nullable=False)
+    message = db.Column(db.Text, nullable=False)
+
+    def __repr__(self):
+        return f'<ContactForm {self.fullname}>'
+
+# Create the database
+with app.app_context():
+    db.create_all()
 
 @app.route('/')
 def home():
@@ -31,42 +34,16 @@ def submit():
     name = request.form.get('fullname')
     email = request.form.get('email')
     message = request.form.get('message')
-    
+
     if not name or not email or not message:
         return jsonify({'error': 'All form fields are required.'}), 400
 
-    try:
-        # Send the email
-        response = ses_client.send_email(
-            Source=SES_SENDER,
-            Destination={
-                'ToAddresses': [SES_RECIPIENT]
-            },
-            Message={
-                'Subject': {
-                    'Data': 'New Contact Form Submission',
-                    'Charset': 'UTF-8'
-                },
-                'Body': {
-                    'Text': {
-                        'Data': f"Name: {name}\nEmail: {email}\nMessage: {message}",
-                        'Charset': 'UTF-8'
-                    }
-                }
-            }
-        )
+    # Save to the database
+    new_entry = ContactForm(fullname=name, email=email, message=message)
+    db.session.add(new_entry)
+    db.session.commit()
 
-        if response['ResponseMetadata']['HTTPStatusCode'] == 200:
-            return jsonify({'success': 'Form submitted successfully!'})
-        else:
-            return jsonify({'error': 'Failed to send message. Please try again later.'}), 500
-
-    except (NoCredentialsError, PartialCredentialsError) as e:
-        print(f"Credentials error: {e}")
-        return jsonify({'error': 'Failed to send message. Invalid AWS credentials.'}), 500
-    except Exception as e:
-        print(f"Error sending email: {e}")
-        return jsonify({'error': 'Failed to send message. Please try again later.'}), 500
+    return jsonify({'success': 'Form submitted successfully!'})
 
 if __name__ == '__main__':
     app.run(debug=True)
